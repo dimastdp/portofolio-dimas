@@ -1,0 +1,90 @@
+.skills {
+  background: var(--bg-primary);
+}
+
+/* ── Filters ── */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.filterBtn {
+  padding: 0.45rem 1.25rem;
+  border-radius: 2rem;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover,
+.filterBtn.active {
+  background: var(--accent-cyan-dim);
+  border-color: var(--border-hover);
+  color: var(--accent-cyan);
+}
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* ── Skill Card ── */
+.card {
+  padding: 1.25rem !important;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  font-size: 1.4rem;
+  width: 2rem;
+  text-align: center;
+}
+
+.skillName {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+/* ── Level Bar ── */
+.levelBar {
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.levelFill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.8s ease;
+  box-shadow: 0 0 8px currentColor;
+}
+
+.levelText {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

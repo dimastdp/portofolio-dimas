@@ -1,0 +1,93 @@
+.container {
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+  max-width: 900px;
+}
+
+.header {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2rem;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--accent-cyan);
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  padding: 2.5rem !important;
+}
+
+.meta {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.postTitle {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.postTitle a {
+  color: var(--text-primary);
+}
+
+.postTitle a:hover {
+  color: var(--accent-cyan);
+}
+
+.excerpt {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 1.5rem !important;
+  }
+}

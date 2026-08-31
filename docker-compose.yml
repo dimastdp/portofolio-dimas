@@ -1,0 +1,50 @@
+version: "3.9"
+
+services:
+  # ─── Next.js Portfolio ────────────────────────────────────────
+  portfolio:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: portfolio
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    expose:
+      - "3000"
+    networks:
+      - portfolio_net
+
+  # ─── Streamlit Web Apps (Unified) ─────────────────────────────
+  webapps:
+    build:
+      context: ./apps/webapps
+      dockerfile: Dockerfile
+    container_name: webapps
+    restart: unless-stopped
+    expose:
+      - "8501"
+    networks:
+      - portfolio_net
+
+  # ─── Nginx Reverse Proxy ──────────────────────────────────────
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: nginx_proxy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    depends_on:
+      - portfolio
+      - webapps
+    networks:
+      - portfolio_net
+
+networks:
+  portfolio_net:
+    driver: bridge

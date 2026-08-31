@@ -1,0 +1,109 @@
+.footer {
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border);
+  padding: 4rem 0 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoIcon {
+  font-family: var(--font-mono);
+  color: var(--accent-cyan);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.tagline {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.socials {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socials a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.socials a:hover {
+  color: var(--accent-cyan);
+}
+
+.scrollTop {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.scrollTop:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  transform: translateY(-3px);
+  background: var(--accent-cyan-dim);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.heart {
+  color: #EF4444;
+  margin: 0 0.1rem;
+}
+
+@media (max-width: 640px) {
+  .top {
+    flex-direction: column;
+  }
+  .bottom {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+}

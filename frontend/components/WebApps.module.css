@@ -1,0 +1,183 @@
+.appsSection {
+  background: var(--bg-secondary);
+}
+
+/* ── Grid: 1 kolom di mobile, 2 kolom di tablet, tetap 1 kolom untuk vertikal stack di desktop ── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* App ke-3 span full width di row ke-2 tengah */
+  .grid > *:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 600px;
+    justify-self: center;
+    width: 100%;
+  }
+}
+
+/* ── App Container ── */
+.appContainer {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.appContainer:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ── App Header ── */
+.appHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+/* ── App Title ── */
+.appTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.appTitle h3 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin: 0 0 0.2rem;
+  line-height: 1.3;
+}
+
+/* ── App Badge ── */
+.appBadge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+  background: var(--accent-cyan-dim);
+  border: 1px solid var(--border-hover);
+  border-radius: 2rem;
+  padding: 0.15rem 0.6rem;
+  line-height: 1.4;
+}
+
+/* ── Icon ── */
+.icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* ── Controls ── */
+.appControls {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.controlBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.controlBtn:hover {
+  color: var(--accent-cyan);
+  background: var(--accent-cyan-dim);
+  opacity: 1;
+}
+
+/* ── Iframe Wrapper ── */
+.iframeWrapper {
+  position: relative;
+  width: 100%;
+  height: 580px;
+  background: var(--bg-primary);
+  flex: 1;
+}
+
+.iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ── Expanded (Fullscreen Overlay) ── */
+.appContainer.expanded {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 1050;
+  height: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85);
+  border-color: var(--border-hover);
+}
+
+.appContainer.expanded .iframeWrapper {
+  height: 100%;
+  flex: 1;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .appContainer.expanded {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+  }
+
+  .appHeader {
+    padding: 0.85rem 1rem;
+  }
+
+  .appTitle h3 {
+    font-size: 0.9rem;
+  }
+
+  .iframeWrapper {
+    height: 480px;
+  }
+}
+
+@media (max-width: 480px) {
+  .iframeWrapper {
+    height: 420px;
+  }
+}

@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Next.js build
+frontend/.next/
+frontend/out/
+frontend/build/
+
+# Environment files
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Archives
+*.tar.gz
+
+# Misc
+npm-debug.log*
+yarn-debug.log*
