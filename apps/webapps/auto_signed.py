@@ -62,7 +62,7 @@ if "run_summary" in st.session_state:
     if summary["results"]:
         df_log = pd.DataFrame(summary["results"])
         st.markdown("##### 📊 Laporan Execution Terakhir")
-        st.dataframe(df_log, width='stretch', hide_index=True)
+        st.dataframe(df_log, use_container_width=True, hide_index=True)
 
         # Tombol Download ke CSV
         csv = df_log.to_csv(index=False).encode('utf-8')
@@ -318,7 +318,7 @@ with col_left:
         with st.container(border=True):
             st.markdown("#### ☁️ Siapkan Dokumen")
             st.checkbox("⏳ Beri waktu lebih lama? (Internet lambat)", key="slow_internet_cb")
-            if st.button("⬇️ Download File Terpilih", width='stretch'):
+            if st.button("⬇️ Download File Terpilih", use_container_width=True):
                 sel_dl = [f for f in filtered_files if st.session_state.get(str(f))]
                 if sel_dl:
                     prog = st.progress(0, text="Mengunduh...")
@@ -355,9 +355,9 @@ with col_right:
         curr_file = filtered_files[st.session_state.preview_idx]
 
         c1, c2, c3 = st.columns([1, 1, 3])
-        c1.button("⬅️ Prev", width='stretch', on_click=change_preview, args=("prev", len(filtered_files)),
+        c1.button("⬅️ Prev", use_container_width=True, on_click=change_preview, args=("prev", len(filtered_files)),
                   disabled=(st.session_state.preview_idx == 0))
-        c2.button("Next ➡️", width='stretch', on_click=change_preview, args=("next", len(filtered_files)),
+        c2.button("Next ➡️", use_container_width=True, on_click=change_preview, args=("next", len(filtered_files)),
                   disabled=(st.session_state.preview_idx >= len(filtered_files) - 1))
 
         with c3:
@@ -427,7 +427,7 @@ with col_right:
                                 page.insert_image(i_rect, stream=rotated_bytes, overlay=True)
 
                     pix = page.get_pixmap(matrix=fitz.Matrix(1.5, 1.5))
-                    st.image(pix.tobytes("jpeg"), width='stretch')
+                    st.image(pix.tobytes("jpeg"), use_container_width=True)
                     st.markdown("---")
             temp_doc.close()
 
@@ -448,7 +448,7 @@ with col_right:
     # ==========================================
     # EXECUTION BLOCK (DENGAN EKSTRAKSI PID & REPORTING)
     # ==========================================
-    if st.button("🚀 JALANKAN PROSES SIGNING", type="primary", width='stretch'):
+    if st.button("🚀 JALANKAN PROSES SIGNING", type="primary", use_container_width=True):
         if not signature_file: st.error("Upload TTD dulu!"); st.stop()
 
         files_to_process = [f for f in filtered_files if st.session_state.get(str(f))]
