@@ -178,55 +178,6 @@ export default function WebApps() {
             </div>
           </motion.div>
 
-          {/* ── App 4: Auto-Signer ── */}
-          <motion.div
-            className={`${styles.appContainer} ${
-              expandedApp === "autosigned" ? styles.expanded : ""
-            }`}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.45, duration: 0.5 }}
-          >
-            <div className={styles.appHeader}>
-              <div className={styles.appTitle}>
-                <span className={styles.icon}>🖋️</span>
-                <div>
-                  <h3>PDF Auto-Signer</h3>
-                  <span className={styles.appBadge}>Automation</span>
-                </div>
-              </div>
-              <div className={styles.appControls}>
-                <button
-                  className={styles.controlBtn}
-                  onClick={() => toggleExpand("autosigned")}
-                  title={expandedApp === "autosigned" ? "Minimize" : "Expand"}
-                >
-                  {expandedApp === "autosigned" ? (
-                    <Minimize2 size={18} />
-                  ) : (
-                    <Maximize2 size={18} />
-                  )}
-                </button>
-                <a
-                  href="/apps/auto-signed"
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.controlBtn}
-                  title="Open in new tab"
-                >
-                  <ExternalLink size={18} />
-                </a>
-              </div>
-            </div>
-            <div className={styles.iframeWrapper}>
-              <iframe
-                src="/apps/auto-signed"
-                className={styles.iframe}
-                title="PDF Auto-Signer"
-              />
-            </div>
-          </motion.div>
 
         </div>
       </div>

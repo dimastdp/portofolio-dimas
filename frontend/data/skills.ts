@@ -22,22 +22,22 @@ export const skills: Skill[] = [
   { name: "AutoCAD 2D & 3D", level: 4, category: "engineering", icon: "📏" }, //
 
   // ── Data & Programming ──
-  { name: "Excel & Power Query", level: 5, category: "data", icon: "📊" }, // Otomatisasi data[cite: 1]
-  { name: "Python", level: 4, category: "data", icon: "🐍" }, // Analitik & Pandas[cite: 1]
-  { name: "VBA Macros", level: 4, category: "data", icon: "⚙️" }, //[cite: 1]
-  { name: "Data Visualization", level: 4, category: "data", icon: "📈" }, //[cite: 1]
+  { name: "Excel & Power Query", level: 5, category: "data", icon: "📊" }, // Otomatisasi data
+  { name: "Python", level: 4, category: "data", icon: "🐍" }, // Analitik & Pandas
+  { name: "VBA Macros", level: 4, category: "data", icon: "⚙️" }, //
+  { name: "Data Visualization", level: 4, category: "data", icon: "📈" }, //
 
   // ── Tools & Automation ──
-  { name: "Power Automate", level: 4, category: "tools", icon: "⚡" }, // Otomatisasi alur kerja[cite: 1]
-  { name: "PowerPoint", level: 5, category: "tools", icon: "📑" }, // Pelaporan visual[cite: 1]
+  { name: "Power Automate", level: 4, category: "tools", icon: "⚡" }, // Otomatisasi alur kerja
+  { name: "PowerPoint", level: 5, category: "tools", icon: "📑" }, // Pelaporan visual
   { name: "Power BI & Looker", level: 4, category: "tools", icon: "📉" },
   { name: "Streamlit & Geospatial Apps", level: 4, category: "tools", icon: "🌐" },
 
   // ── Management & Soft Skills ──
-  { name: "Asset & Operational Management", level: 5, category: "soft", icon: "🏢" }, //[cite: 1]
-  { name: "Project Management", level: 4, category: "soft", icon: "📅" }, //[cite: 1]
-  { name: "Technical Reporting", level: 5, category: "soft", icon: "📝" }, //[cite: 1]
-  { name: "Stakeholder Management", level: 4, category: "soft", icon: "🤝" }, //[cite: 1]
+  { name: "Asset & Operational Management", level: 5, category: "soft", icon: "🏢" }, //
+  { name: "Project Management", level: 4, category: "soft", icon: "📅" }, //
+  { name: "Technical Reporting", level: 5, category: "soft", icon: "📝" }, //
+  { name: "Stakeholder Management", level: 4, category: "soft", icon: "🤝" }, //
 ];
 
 export const skillCategories = [
