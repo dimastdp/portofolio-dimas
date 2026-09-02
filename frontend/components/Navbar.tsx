@@ -60,10 +60,6 @@ export default function Navbar() {
             {theme === "dark" ? "☀️" : "🌙"}
           </button>
 
-          {/* CV Download */}
-          <a href={profile.cvUrl} download className={`btn btn-outline ${styles.cvBtn}`}>
-            Download CV
-          </a>
 
           {/* Hamburger */}
           <button

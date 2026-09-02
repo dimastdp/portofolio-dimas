@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { profile } from "@/data/profile";
 import styles from "./Contact.module.css";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Mail, MapPin, Linkedin, Instagram, Send } from "lucide-react";
 
 export default function Contact() {
   const [formState, setFormState] = useState({
@@ -65,15 +65,29 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className={`card ${styles.infoCard}`}>
-              <div className={styles.iconWrapper}>
-                <Phone size={24} />
+            {profile.linkedin && (
+              <div className={`card ${styles.infoCard}`}>
+                <div className={styles.iconWrapper}>
+                  <Linkedin size={24} />
+                </div>
+                <div>
+                  <h3>LinkedIn</h3>
+                  <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">dimastdp</a>
+                </div>
               </div>
-              <div>
-                <h3>Phone</h3>
-                <p>{profile.phone}</p>
+            )}
+
+            {profile.instagram && (
+              <div className={`card ${styles.infoCard}`}>
+                <div className={styles.iconWrapper}>
+                  <Instagram size={24} />
+                </div>
+                <div>
+                  <h3>Instagram</h3>
+                  <a href={`https://instagram.com/${profile.instagram}`} target="_blank" rel="noopener noreferrer">@{profile.instagram}</a>
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
           {/* Contact Form */}

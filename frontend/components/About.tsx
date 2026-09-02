@@ -41,13 +41,24 @@ export default function About() {
               {[
                 { icon: "📍", label: profile.location },
                 { icon: "📧", label: profile.email },
-                { icon: "📞", label: profile.phone },
               ].map((item) => (
                 <div key={item.label} className={styles.infoRow}>
                   <span>{item.icon}</span>
                   <span>{item.label}</span>
                 </div>
               ))}
+              {profile.linkedin && (
+                <div className={styles.infoRow}>
+                  <span>💼</span>
+                  <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+              )}
+              {profile.instagram && (
+                <div className={styles.infoRow}>
+                  <span>📸</span>
+                  <a href={`https://instagram.com/${profile.instagram}`} target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div>
+              )}
             </div>
           </motion.div>
 

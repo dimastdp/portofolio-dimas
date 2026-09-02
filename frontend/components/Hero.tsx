@@ -107,9 +107,21 @@ export default function Hero() {
             <a href="#apps" className="btn btn-outline">
               🛠️ Web Apps
             </a>
-            <a href={profile.cvUrl} download className="btn btn-outline">
-              ⬇ Download CV
-            </a>
+            {profile.linkedin && (
+              <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+                LinkedIn
+              </a>
+            )}
+            {profile.instagram && (
+              <a href={`https://instagram.com/${profile.instagram}`} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+                Instagram
+              </a>
+            )}
+            {profile.email && (
+              <a href={`mailto:${profile.email}`} className="btn btn-outline">
+                Email
+              </a>
+            )}
           </motion.div>
 
           {/* Stats */}

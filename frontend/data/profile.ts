@@ -32,8 +32,4 @@ export const profile = {
   linkedin: "https://linkedin.com/in/dimastdp",
   github: "https://github.com/dimastdp",
   instagram: "dimastdp",
-  // No HP (contoh)
-  phone: "+62 812 3456 7890",
-  // Link CV PDF yang bisa didownload (taruh file di folder public/)
-  cvUrl: "/CV-Dimas TD.pdf",
 };
