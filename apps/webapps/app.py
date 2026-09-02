@@ -18,4 +18,5 @@ Silakan pilih aplikasi dari sidebar di sebelah kiri:
 1. **Extract SDA**: Alat bantu batch extractor untuk MS Tower.
 2. **Geometry Viewer**: Visualisasi model 3D dan 2D dari MSTower.
 3. **Shifting Checker (Geo-Mapper Pro)**: Tool pengecekan shifting site berbasis peta interaktif.
+4. **PDF Auto-Signer**: Alat otomasi tanda tangan digital dengan OCR dan Template Mode.
 """)

@@ -8,3 +8,6 @@ streamlit-folium==0.27.4
 geopy==2.4.1
 shapely==2.0.6
 numpy==1.26.4
+PyMuPDF==1.23.8
+Pillow==10.2.0
+pytesseract==0.3.10

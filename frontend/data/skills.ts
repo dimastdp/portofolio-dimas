@@ -14,37 +14,35 @@ export interface Skill {
 }
 
 export const skills: Skill[] = [
-  // ── Civil & Structural Engineering ──
-  { name: "Structural Analysis", level: 5, category: "engineering", icon: "🏗️" },
-  { name: "MS Tower", level: 5, category: "engineering", icon: "🗼" },
-  { name: "Tower Design", level: 5, category: "engineering", icon: "📐" },
-  { name: "Foundation Design", level: 4, category: "engineering", icon: "⚓" },
-  { name: "AutoCAD", level: 4, category: "engineering", icon: "📏" },
-  { name: "STAAD Pro", level: 3, category: "engineering", icon: "🔩" },
+  // ── Civil & Telecom Engineering ──
+  { name: "Structural & Tower Assessment", level: 5, category: "engineering", icon: "🏗️" }, // TIA-222-G, SST, Monopole
+  { name: "Site Planning", level: 4, category: "engineering", icon: "🗺️" }, //
+  { name: "MS Tower & tnxTower", level: 4, category: "engineering", icon: "🗼" },
+  { name: "Tekla Structures", level: 4, category: "engineering", icon: "🏢" }, // Fabrikasi & detailing
+  { name: "AutoCAD 2D & 3D", level: 4, category: "engineering", icon: "📏" }, //
 
   // ── Data & Programming ──
-  { name: "Python", level: 4, category: "data", icon: "🐍" },
-  { name: "Pandas / NumPy", level: 4, category: "data", icon: "📊" },
-  { name: "Plotly / Data Viz", level: 4, category: "data", icon: "📈" },
-  { name: "Streamlit", level: 4, category: "data", icon: "⚡" },
-  { name: "Excel / VBA", level: 4, category: "data", icon: "📋" },
-  { name: "SQL", level: 3, category: "data", icon: "🗄️" },
+  { name: "Excel & Power Query", level: 5, category: "data", icon: "📊" }, // Otomatisasi data[cite: 1]
+  { name: "Python", level: 4, category: "data", icon: "🐍" }, // Analitik & Pandas[cite: 1]
+  { name: "VBA Macros", level: 4, category: "data", icon: "⚙️" }, //[cite: 1]
+  { name: "Data Visualization", level: 4, category: "data", icon: "📈" }, //[cite: 1]
 
-  // ── Tools ──
-  { name: "Docker", level: 3, category: "tools", icon: "🐳" },
-  { name: "Git / GitHub", level: 3, category: "tools", icon: "🔀" },
-  { name: "Linux / VPS", level: 3, category: "tools", icon: "🖥️" },
-  { name: "VS Code", level: 5, category: "tools", icon: "💻" },
+  // ── Tools & Automation ──
+  { name: "Power Automate", level: 4, category: "tools", icon: "⚡" }, // Otomatisasi alur kerja[cite: 1]
+  { name: "PowerPoint", level: 5, category: "tools", icon: "📑" }, // Pelaporan visual[cite: 1]
+  { name: "Power BI & Looker", level: 4, category: "tools", icon: "📉" },
+  { name: "Streamlit & Geospatial Apps", level: 4, category: "tools", icon: "🌐" },
 
-  // ── Soft Skills ──
-  { name: "Engineering Report", level: 5, category: "soft", icon: "📝" },
-  { name: "Problem Solving", level: 5, category: "soft", icon: "🧠" },
-  { name: "Project Management", level: 4, category: "soft", icon: "📅" },
+  // ── Management & Soft Skills ──
+  { name: "Asset & Operational Management", level: 5, category: "soft", icon: "🏢" }, //[cite: 1]
+  { name: "Project Management", level: 4, category: "soft", icon: "📅" }, //[cite: 1]
+  { name: "Technical Reporting", level: 5, category: "soft", icon: "📝" }, //[cite: 1]
+  { name: "Stakeholder Management", level: 4, category: "soft", icon: "🤝" }, //[cite: 1]
 ];
 
 export const skillCategories = [
-  { key: "engineering", label: "Civil Engineering", color: "#00D4FF" },
+  { key: "engineering", label: "Civil & Telecom Engineering", color: "#00D4FF" },
   { key: "data", label: "Data & Programming", color: "#7C3AED" },
-  { key: "tools", label: "Tools & DevOps", color: "#059669" },
-  { key: "soft", label: "Soft Skills", color: "#D97706" },
+  { key: "tools", label: "Tools & Automation", color: "#059669" },
+  { key: "soft", label: "Management & Soft Skills", color: "#D97706" },
 ];

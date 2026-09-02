@@ -43,14 +43,23 @@ export const projects: Project[] = [
     liveUrl: "/apps/mstower",
   },
   {
-    id: "project-3",
-    title: "[Nama Proyek Anda]",
+    id: "shifting-checker",
+    title: "Geo-Mapper Pro (Shifting Checker)",
     description:
-      "Deskripsi singkat proyek engineering atau data analysis yang pernah Anda kerjakan. " +
-      "Ceritakan masalah yang diselesaikan dan teknologi yang digunakan.",
-    tags: ["Civil Engineering", "Python", "Data Analysis"],
-    featured: false,
-    liveUrl: "",
-    githubUrl: "",
+      "Aplikasi berbasis peta interaktif untuk mengecek pergeseran (shifting) koordinat site. " +
+      "Menggunakan Folium dan Geopy untuk visualisasi radius dan pengukuran jarak antar site secara akurat.",
+    tags: ["Python", "Streamlit", "Folium", "Geospatial", "Data Mapping"],
+    featured: true,
+    liveUrl: "/apps/shifting-checker",
+  },
+  {
+    id: "auto-signed",
+    title: "PDF Auto-Signer",
+    description:
+      "Alat otomasi tanda tangan digital pada dokumen PDF dengan presisi. " +
+      "Menggunakan OCR (Tesseract) untuk mendeteksi area tanda tangan atau mode template untuk posisi absolut.",
+    tags: ["Python", "Streamlit", "PyMuPDF", "OCR", "Automation"],
+    featured: true,
+    liveUrl: "/apps/auto-signed",
   },
 ];
